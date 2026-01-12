@@ -1,6 +1,6 @@
-# Secure Care Analytics
+# Secure Care: Privacy-First Analytics for Patient Stratification & Utilization Forecasting
 
-**Privacy-Aware Predictive Modeling for Health Tech (Simulated Case Study)**
+**Predictive Modeling for Health Tech (Simulated Case Study)**
 
 ## Overview
 
@@ -29,8 +29,8 @@ All data used is anonymized and intended solely for methodological demonstration
 
 ## Key Results
 
-* **Bias-Aware Modeling:**
-  Feature scaling was shown to be essential for preventing socioeconomic bias in patient similarity modeling.
+* **Socioeconomic Equity:**
+  Implemented robust feature scaling to ensure distance-based models (kNN) prioritize health needs over numeric magnitude, preventing accidental socioeconomic bias in care stratification.
 
 * **Predictive Performance:**
   Machine learning models significantly outperformed baseline heuristics (F1 ≈ 0.93 vs ~0.20).
@@ -48,10 +48,23 @@ All data used is anonymized and intended solely for methodological demonstration
 * **Focus:** Interpretability, auditability, and operational relevance
 
 
-## Repository Structure
+## Visual Proof of Concept
 
-* `notebook.ipynb` — Main analysis and modeling workflow
-* `README.md` — Project overview and results
+### 1. Operational Impact: Outperforming the Baseline
+By moving from heuristic approaches (random guessing or prior probability) to trained predictive models, we achieved a massive lift in key performance metrics, moving F1 scores from ~0.20 to ~0.94.
+
+![Performance Lift Chart](viz_performance_lift.png)
+
+*Figure 1: Comparison of F1 Scores showing significant lift over the baseline heuristic.*
+
+---
+
+### 2. Privacy Proof: Mathematical Integrity under Obfuscation
+Critical to healthcare compliance, the linear algebra-based obfuscation technique ensures that model outputs remain mathematically identical, regardless of whether raw or secured data is used. The points falling perfectly on the diagonal line below prove that predictions are unaffected by the privacy transformation.
+
+![Privacy Proof Scatter Plot](viz_privacy_proof.png)
+
+*Figure 2: Scatter plot comparing predictions from raw vs. obfuscated data. The perfect alignment along the identity line proves that RMSE remains unchanged.*
 
 
 ## Why This Project Matters
