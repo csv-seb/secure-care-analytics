@@ -48,7 +48,7 @@ All data used is anonymized and intended solely for methodological demonstration
 * **Focus:** Interpretability, auditability, and operational relevance
 
 
-## Visual Proof of Concept
+## Visual Insights
 
 ### 1. Operational Impact: Outperforming the Baseline
 By moving from heuristic approaches (random guessing or prior probability) to trained predictive models, we achieved a massive lift in key performance metrics, moving F1 scores from ~0.20 to ~0.94.
